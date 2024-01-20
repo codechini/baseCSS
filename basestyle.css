@@ -1,0 +1,297 @@
+:root {
+  /* color-scheme: light dark; */
+  --bg: rgb(253, 253, 253);
+
+  --bg-container: color-mix(in srgb, rgb(250, 253, 253) 85%, rgb(0, 0, 0));
+  --btn-color: var(--text1);
+  --btn-bg: var(--color1);
+
+  --color1: rgb(240, 255, 156);
+  --color2: color-mix(in srgb, var(--color1) 90%, rgb(0, 0, 0));
+  --color3: color-mix(in srgb, var(--color1) 70%, rgb(0, 0, 0));
+  --input-bg: var(--bg);
+  --input-text: var(--text1);
+  --input-border: var(--color3);
+
+  --text1: color-mix(in srgb, rgb(0, 0, 0) 98%, rgb(250, 253, 253));
+  --text2: color-mix(in srgb, rgb(0, 0, 0) 83%, rgb(250, 253, 253));
+  --text3: color-mix(in srgb, rgb(0, 0, 0) 78%, rgb(250, 253, 253));
+  --text4: color-mix(in srgb, rgb(0, 0, 0) 66%, rgb(250, 253, 253));
+  --text5: color-mix(in srgb, rgb(0, 0, 0) 54%, rgb(250, 253, 253));
+  --text6: color-mix(in srgb, rgb(0, 0, 0) 57%, rgb(250, 253, 253));
+}
+
+@media (prefers-color-scheme:dark) {
+  :root {
+    --bg: rgb(30, 30, 30);
+    --btn-color: rgb(--color1);
+    --btn-bg: var(--bg);
+    --bg-container: color-mix(in srgb, rgb(30, 30, 30) 93%, rgb(250, 253, 253));
+    --input-bg: var(--bg);
+    --input-text: var(--text1);
+    --input-border: var(--color1);
+    --text1: color-mix(in srgb, var(--color1) 98%, rgb(0, 0, 0));
+    --text2: color-mix(in srgb, var(--color1) 83%, rgb(0, 0, 0));
+    --text3: color-mix(in srgb, var(--color1) 78%, rgb(0, 0, 0));
+    --text4: color-mix(in srgb, var(--color1) 66%, rgb(0, 0, 0));
+    --text5: color-mix(in srgb, var(--color1) 54%, rgb(0, 0, 0));
+    --text6: color-mix(in srgb, var(--color1) 57%, rgb(0, 0, 0));
+  }
+}
+
+body {
+  background-color: var(--bg);
+  font-size: 1.125rem;
+  line-height: 1.55;
+  scrollbar-gutter: stable;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text1);
+}
+
+a:hover {
+  color: var(--text3);
+}
+
+a:not(:first-child) {
+  color: var(--text5);
+}
+
+a:not(:first-child):hover {
+  color: var(--text3);
+}
+
+button {
+  border-radius: 4px;
+  border: 1px solid;
+  padding: 1em 2.1em 1.1em;
+  margin: 8px 8px 8px 8px;
+  font-weight: 400;
+  color: var(--btn-color);
+  background-color: var(--btn-bg);
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  -webkit-box-shadow: 0em -0.2rem 0em rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0em -0.2rem 0em rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0em -0.2rem 0em rgba(0, 0, 0, 0.1) inset;
+}
+
+button:hover,
+button:focus {
+  opacity: 0.7;
+}
+
+button:active {
+  /* opacity: 0.7; */
+  -webkit-transform: scale(0.97);
+  -moz-transform: scale(0.97);
+  -ms-transform: scale(0.97);
+  -o-transform: scale(0.97);
+  transform: scale(0.97);
+}
+
+button:not(:active) {
+  /* opacity: 0.7; */
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+
+footer {
+  display: flex;
+  /* width: min(140ch, 100% - 4rem); */
+  /* padding: 1rem 2rem 2rem 2rem; */
+  margin-top: 2rem;
+  line-height: 2rem;
+  gap: 2.5rem;
+  background-color: var(--bg-container);
+}
+
+form {
+  border: 1px solid var(--color3);
+  border-radius: 4px;
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: 3vw 0vw;
+}
+
+form>label {
+  /* padding: 1em 2.1em 1.1em; */
+  margin: 8px 8px 0px 8px;
+}
+
+header {
+  color: var(--text1);
+  font-size: inherit;
+}
+
+h1 {
+  color: var(--text1);
+}
+
+h2 {
+  color: var(--text2);
+}
+
+
+
+article,
+h3,
+p {
+  color: var(--text3);
+}
+
+h4 {
+  color: var(--text4);
+}
+
+h5 {
+  color: var(--text5);
+}
+
+h6 {
+  color: var(--text6);
+}
+
+hr {
+  width: 100%;
+  background-color: var(--text2);
+  padding: 0;
+  margin: 0;
+}
+
+iframe::-webkit-scrollbar {
+  display: none;
+}
+
+input {
+  max-width: -webkit-fill-available;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  border: 1.2px solid var(--input-border);
+  color: var(--input-text);
+  background-color: var(--input-bg);
+  padding: 1em 2.1em 1.1em;
+  margin: 8px 8px 8px 8px;
+  font-weight: 400;
+}
+
+input:focus {
+  border: 1.2px solid var(--color2);
+  outline: 0;
+}
+
+input:active {
+  border: 1.2px solid var(--color2);
+  border: 0;
+}
+
+input:hover {
+  border: 1.2px solid var(--color2);
+}
+
+label {
+  color: var(--text1);
+}
+
+main {
+  width: min(140ch, 100% - 4rem);
+  margin-inline: auto;
+  color: var(--color1);
+}
+
+img,
+svg,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+section:nth-child(odd) {
+  display: block;
+  text-align: start;
+}
+
+section:nth-child(even) {
+  text-align: end;
+}
+
+textarea {
+  font-family: inherit;
+  width: calc(100% - 2rem);
+  /* width: 100%; */
+  color: var(--text1);
+  background-color: var(--textarea-bg);
+  font-size: 1.125rem;
+}
+
+textarea::-webkit-scrollbar {
+  /* display: none; */
+  scrollbar-width: thin;
+}
+
+ol {
+  list-style-type: decimal-leading-zero;
+}
+
+ul {
+  list-style-type: '-';
+  padding-left: 1rem;
+}
+
+li::marker {
+  color: var(--text3);
+}
+
+li {
+  padding-left: 3px;
+  color: var(--text4);
+
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* gap: 0px 5px; */
+}
+
+.flex-start {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  text-align: start;
+  gap: 0px 5px;
+}
+
+.highlight {
+  /* background-color: var(--bg-container); */
+  border: 1px solid var(--bg-container);
+}
+
+@media screen and (width<768px) {
+  footer {
+    display: grid;
+    gap: 1rem;
+  }
+}
+
+@media screen and (width>768px) {
+  hr {
+    display: none;
+  }
+}
